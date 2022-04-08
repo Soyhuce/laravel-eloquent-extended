@@ -1,19 +1,11 @@
-# :package_description
+# Some useful extensions for Eloquent
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/:vendor_slug/:package_slug/run-tests?label=tests)](https://github.com/:vendor_slug/:package_slug/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/:vendor_slug/:package_slug/Check%20&%20fix%20styling?label=code%20style)](https://github.com/:vendor_slug/:package_slug/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
-[![GitHub PHPStan Action Status](https://img.shields.io/github/workflow/status/:vendor_slug/:package_slug/PHPStan?label=phpstan)](https://github.com/:vendor_slug/:package_slug/actions?query=workflow%3APHPStan+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
-<!--delete-->
----
-This repo can be used to scaffold a Laravel package. Follow these steps to get started:
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/soyhuce/laravel-eloquent-extended.svg?style=flat-square)](https://packagist.org/packages/soyhuce/laravel-eloquent-extended)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/soyhuce/laravel-eloquent-extended/run-tests?label=tests)](https://github.com/soyhuce/laravel-eloquent-extended/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/soyhuce/laravel-eloquent-extended/Check%20&%20fix%20styling?label=code%20style)](https://github.com/soyhuce/laravel-eloquent-extended/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
+[![GitHub PHPStan Action Status](https://img.shields.io/github/workflow/status/soyhuce/laravel-eloquent-extended/PHPStan?label=phpstan)](https://github.com/soyhuce/laravel-eloquent-extended/actions?query=workflow%3APHPStan+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/soyhuce/laravel-eloquent-extended.svg?style=flat-square)](https://packagist.org/packages/soyhuce/laravel-eloquent-extended)
 
-1. Press the "Use template" button at the top of this repo to create a new repo with the contents of this skeleton.
-2. Run "php ./configure.php" to run a script that will replace all placeholders throughout all the files.
-3. Have fun creating your package.
----
-<!--/delete-->
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
 
 ## Installation
@@ -21,41 +13,59 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 You can install the package via composer:
 
 ```bash
-composer require :vendor_slug/:package_slug
+composer require soyhuce/laravel-eloquent-extended
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag=":package_slug-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag=":package_slug-config"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag=":package_slug-views"
-```
 
 ## Usage
 
-```php
-$variable = new VendorName\Skeleton();
-echo $variable->echoPhrase('Hello, VendorName!');
-```
+## Builder
+
+### Misc
+
+- Builder::scope(Illuminate\Database\Eloquent\Scope $score): Builder
+- Builder::scoped(\Closure $callable): Builder
+
+### Ordering
+
+- Builder::preventInvalidDirection(string $direction): void
+- Builder::orderByNullsLast(string $column, string $direction = 'asc'): Builder
+- Builder::orderByRawNullsLast(string $sql): Builder
+- Builder::orderByAggregate( string $relationName, string $column, string $direction = 'asc', ?string $function = null,
+  ?Closure $constraints = null)
+- Builder::orderByExists(string $relation, ?Closure $constraints = null, string $direction = 'asc')
+- Builder::orderByExistsDesc(string $relation, ?Closure $constraints = null)
+- Builder::orderByCount(string $relation, ?Closure $constraints = null, string $direction = 'asc')
+- Builder::orderByCountDesc(string $relation, ?Closure $constraints = null)
+- Builder::orderBySum(string $relation, string $column, ?Closure $constraints = null, string $direction = 'asc')
+- Builder::orderBySumDesc(string $relation, string $column, ?Closure $constraints = null)
+- Builder::orderByMin(string $relation, string $column, ?Closure $constraints = null, string $direction = 'asc')
+- Builder::orderByMinDesc(string $relation, string $column, ?Closure $constraints = null)
+- Builder::orderByMax(string $relation, string $column, ?Closure $constraints = null, string $direction = 'asc')
+- Builder::orderByMaxDesc(string $relation, string $column, ?Closure $constraints = null)
+
+### Result
+
+- Builder::random(): Model
+
+### Select
+
+- Builder::withAggregateFunction( $relations, \Soyhuce\EloquentExtended\Aggregates\Contracts\AggregateFunction
+  $aggregateFunction): Builder
+- Builder::withAnyExists(array $relations, string $alias = 'related_exists') : Builder
+- Builder::withImplode($relations, string $column, string $glue, ?string $orderBy = null, string $direction = 'asc') :
+  Builder
+
+## Eloquent Collection
+
+- Collection::loadAttributes(Closure(Builder): Builder|void $loadWith): Collection
+
+## Model traits
+
+### LoadsAttributes
+
+- Model::loadAttributes(Closure(Builder): Builder|void $loadWith): Model
+
 
 ## Testing
 
@@ -77,7 +87,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [:author_name](https://github.com/:author_username)
+- [Bastien Philippe](https://github.com/bastien-phi)
 - [All Contributors](../../contributors)
 
 ## License

@@ -1,0 +1,137 @@
+parameters:
+  ignoreErrors:
+    -
+      message: "#^PHPDoc tag @mixin contains generic class Illuminate\\\\Database\\\\Eloquent\\\\Collection but does not specify its types\\: TKey, TModel$#"
+      count: 1
+      path: src/Mixins/CollectionMixin.php
+
+    -
+      message: "#^PHPDoc tag @mixin contains generic class Illuminate\\\\Database\\\\Eloquent\\\\Builder but does not specify its types\\: TModelClass$#"
+      count: 1
+      path: src/Mixins/Misc.php
+
+    -
+      message: "#^Parameter \\#1 \\$builder of method Illuminate\\\\Database\\\\Eloquent\\\\Scope\\:\\:apply\\(\\) expects Illuminate\\\\Database\\\\Eloquent\\\\Builder, \\$this\\(Soyhuce\\\\EloquentExtended\\\\Mixins\\\\Misc\\) given\\.$#"
+      count: 1
+      path: src/Mixins/Misc.php
+
+    -
+      message: "#^Call to protected method callScope\\(\\) of class Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\.$#"
+      count: 1
+      path: src/Mixins/Ordering.php
+
+    -
+      message: "#^Call to protected method getRelationWithoutConstraints\\(\\) of class Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\.$#"
+      count: 1
+      path: src/Mixins/Ordering.php
+
+    -
+      message: "#^Method Soyhuce\\\\EloquentExtended\\\\Mixins\\\\Ordering\\:\\:orderByAggregate\\(\\) invoked with 5 parameters, 0 required\\.$#"
+      count: 5
+      path: src/Mixins/Ordering.php
+
+    -
+      message: "#^Method Soyhuce\\\\EloquentExtended\\\\Mixins\\\\Ordering\\:\\:orderByCount\\(\\) invoked with 3 parameters, 0 required\\.$#"
+      count: 1
+      path: src/Mixins/Ordering.php
+
+    -
+      message: "#^Method Soyhuce\\\\EloquentExtended\\\\Mixins\\\\Ordering\\:\\:orderByExists\\(\\) invoked with 3 parameters, 0 required\\.$#"
+      count: 1
+      path: src/Mixins/Ordering.php
+
+    -
+      message: "#^Method Soyhuce\\\\EloquentExtended\\\\Mixins\\\\Ordering\\:\\:orderByMax\\(\\) invoked with 4 parameters, 0 required\\.$#"
+      count: 1
+      path: src/Mixins/Ordering.php
+
+    -
+      message: "#^Method Soyhuce\\\\EloquentExtended\\\\Mixins\\\\Ordering\\:\\:orderByMin\\(\\) invoked with 4 parameters, 0 required\\.$#"
+      count: 1
+      path: src/Mixins/Ordering.php
+
+    -
+      message: "#^Method Soyhuce\\\\EloquentExtended\\\\Mixins\\\\Ordering\\:\\:orderBySum\\(\\) invoked with 4 parameters, 0 required\\.$#"
+      count: 1
+      path: src/Mixins/Ordering.php
+
+    -
+      message: "#^Method Soyhuce\\\\EloquentExtended\\\\Mixins\\\\Ordering\\:\\:preventInvalidDirection\\(\\) invoked with 1 parameter, 0 required\\.$#"
+      count: 2
+      path: src/Mixins/Ordering.php
+
+    -
+      message: "#^PHPDoc tag @mixin contains generic class Illuminate\\\\Database\\\\Eloquent\\\\Builder but does not specify its types\\: TModelClass$#"
+      count: 1
+      path: src/Mixins/Ordering.php
+
+    -
+      message: "#^Parameter \\#2 \\$parentQuery of method Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Relation\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:getRelationExistenceQuery\\(\\) expects Illuminate\\\\Database\\\\Eloquent\\\\Builder, \\$this\\(Soyhuce\\\\EloquentExtended\\\\Mixins\\\\Ordering\\) given\\.$#"
+      count: 1
+      path: src/Mixins/Ordering.php
+
+    -
+      message: "#^Property Illuminate\\\\Database\\\\Query\\\\Builder\\:\\:\\$orders \\(array\\) does not accept null\\.$#"
+      count: 1
+      path: src/Mixins/Ordering.php
+
+    -
+      message: "#^PHPDoc tag @mixin contains generic class Illuminate\\\\Database\\\\Eloquent\\\\Builder but does not specify its types\\: TModelClass$#"
+      count: 1
+      path: src/Mixins/Result.php
+
+    -
+      message: "#^Access to protected property Soyhuce\\\\EloquentExtended\\\\Mixins\\\\Select\\<TModelClass of Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:\\$query\\.$#"
+      count: 3
+      path: src/Mixins/Select.php
+
+    -
+      message: "#^Anonymous function should return Soyhuce\\\\EloquentExtended\\\\Mixins\\\\Select but returns Closure\\.$#"
+      count: 2
+      path: src/Mixins/Select.php
+
+    -
+      message: "#^Call to protected method callScope\\(\\) of class Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\.$#"
+      count: 1
+      path: src/Mixins/Select.php
+
+    -
+      message: "#^Call to protected method getRelationWithoutConstraints\\(\\) of class Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<TModelClass of Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\.$#"
+      count: 1
+      path: src/Mixins/Select.php
+
+    -
+      message: "#^Call to protected method parseWithRelations\\(\\) of class Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<TModelClass of Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\.$#"
+      count: 1
+      path: src/Mixins/Select.php
+
+    -
+      message: "#^Method Soyhuce\\\\EloquentExtended\\\\Mixins\\\\Select\\<TModelClass of Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:withAggregateFunction\\(\\) invoked with 2 parameters, 0 required\\.$#"
+      count: 2
+      path: src/Mixins/Select.php
+
+    -
+      message: "#^Parameter \\#1 \\$query of method Soyhuce\\\\EloquentExtended\\\\Aggregates\\\\Contracts\\\\AggregateFunction\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:apply\\(\\) expects Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>, \\$this\\(Soyhuce\\\\EloquentExtended\\\\Mixins\\\\Select\\<TModelClass of Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\) given\\.$#"
+      count: 1
+      path: src/Mixins/Select.php
+
+    -
+      message: "#^Parameter \\#1 \\$query of method Soyhuce\\\\EloquentExtended\\\\Aggregates\\\\Contracts\\\\MultiRelationAggregate\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:enclose\\(\\) expects Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>, \\$this\\(Soyhuce\\\\EloquentExtended\\\\Mixins\\\\Select\\<TModelClass of Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\) given\\.$#"
+      count: 1
+      path: src/Mixins/Select.php
+
+    -
+      message: "#^Parameter \\#1 \\$value of static method Illuminate\\\\Support\\\\Str\\:\\:snake\\(\\) expects string, string\\|null given\\.$#"
+      count: 1
+      path: src/Mixins/Select.php
+
+    -
+      message: "#^Parameter \\#2 \\$parentQuery of method Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Relation\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:getRelationExistenceQuery\\(\\) expects Illuminate\\\\Database\\\\Eloquent\\\\Builder, \\$this\\(Soyhuce\\\\EloquentExtended\\\\Mixins\\\\Select\\<TModelClass of Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\) given\\.$#"
+      count: 1
+      path: src/Mixins/Select.php
+
+    -
+      message: "#^Property Illuminate\\\\Database\\\\Query\\\\Builder\\:\\:\\$orders \\(array\\) does not accept null\\.$#"
+      count: 1
+      path: src/Mixins/Select.php
+

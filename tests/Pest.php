@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
 
-use VendorName\Skeleton\Tests\TestCase;
+use Soyhuce\EloquentExtended\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);
