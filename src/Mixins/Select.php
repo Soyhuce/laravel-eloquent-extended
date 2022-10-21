@@ -30,8 +30,8 @@ class Select
                 return $this;
             }
 
-            if ($this->query->columns === null) {
-                $this->query->select([$this->query->from . '.*']);
+            if ($this->getQuery()->columns === null) {
+                $this->getQuery()->select([$this->getQuery()->from . '.*']);
             }
 
             $column = $aggregateFunction->column();
