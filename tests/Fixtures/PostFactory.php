@@ -16,7 +16,7 @@ class PostFactory extends Factory
         return [
             'user_id' => User::factory(),
             'title' => $this->faker->words(asText: true),
-            'published' => $this->faker->boolean,
+            'published' => $this->faker->boolean(),
         ];
     }
 
