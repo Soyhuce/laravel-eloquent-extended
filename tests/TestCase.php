@@ -3,6 +3,7 @@
 namespace Soyhuce\EloquentExtended\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Foundation\Testing\Concerns\InteractsWithDeprecationHandling;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Soyhuce\EloquentExtended\EloquentExtendedServiceProvider;
 
@@ -11,9 +12,12 @@ use Soyhuce\EloquentExtended\EloquentExtendedServiceProvider;
  */
 class TestCase extends Orchestra
 {
+    use InteractsWithDeprecationHandling;
+
     protected function setUp(): void
     {
         parent::setUp();
+        $this->withoutDeprecationHandling();
 
         $this->loadMigrationsFrom(__DIR__ . '/migrations');
         Factory::guessFactoryNamesUsing(fn (string $modelName) => $modelName . 'Factory');
