@@ -15,6 +15,10 @@ class Extension implements ModelResolver
         $builderClass = $model->queryBuilder->fqcn;
         $collectionClass = $model->collection->fqcn;
 
+        if ((bool) config('next-ide-helper.models.larastan_friendly', false)) {
+            $collectionClass .= "<int, {$modelClass}>";
+        }
+
         Collection::make([
             'bool insertModels(array $values)',
             'int upsertModels(array $values, string|array $uniqueBy, ?array $update = null)',
@@ -42,6 +46,7 @@ class Extension implements ModelResolver
             ->when(
                 InstalledVersions::isInstalled('tpetry/laravel-postgresql-enhanced'),
                 fn (Collection $collection) => $collection->merge([
+                    "{$collectionClass} insertModelsReturning(array \$values, array \$returning = ['*'])",
                     "{$collectionClass} upsertModelsReturning(array \$values, array|string \$uniqueBy, ?array \$update = null, array \$returning = ['*'])",
                 ])
             )
