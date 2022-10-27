@@ -2,6 +2,7 @@
 
 namespace Soyhuce\EloquentExtended\NextIdeHelper;
 
+use Composer\InstalledVersions;
 use Illuminate\Support\Collection;
 use Soyhuce\NextIdeHelper\Contracts\ModelResolver;
 use Soyhuce\NextIdeHelper\Domain\Models\Entities\Model;
@@ -12,6 +13,7 @@ class Extension implements ModelResolver
     {
         $modelClass = $model->fqcn;
         $builderClass = $model->queryBuilder->fqcn;
+        $collectionClass = $model->collection->fqcn;
 
         Collection::make([
             'bool insertModels(array $values)',
@@ -37,6 +39,12 @@ class Extension implements ModelResolver
             "{$builderClass} orderByMaxDesc(string \$relation, string \$column, ?\\Closure \$constraints = null)",
             "{$modelClass}|null random()",
         ])
+            ->when(
+                InstalledVersions::isInstalled('tpetry/laravel-postgresql-enhanced'),
+                fn (Collection $collection) => $collection->merge([
+                    "{$collectionClass} upsertModelsReturning(array \$values, array|string \$uniqueBy, ?array \$update = null, array \$returning = ['*'])",
+                ])
+            )
             ->map(fn (string $method) => " * @method {$method}")
             ->each(function (string $method) use ($model): void {
                 $model->queryBuilder->addExtra($method);

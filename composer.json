@@ -31,7 +31,11 @@
         "phpstan/phpstan-deprecation-rules": "^1.0",
         "phpstan/phpstan-phpunit": "^1.0",
         "phpunit/phpunit": "^9.5",
-        "soyhuce/next-ide-helper": "^0.11.0"
+        "soyhuce/next-ide-helper": "^0.11.0",
+        "tpetry/laravel-postgresql-enhanced": "^0.21.0"
+    },
+    "suggest": {
+        "tpetry/laravel-postgresql-enhanced": "Specific PostgreSQL extensions for Eloquent"
     },
     "autoload": {
         "psr-4": {
