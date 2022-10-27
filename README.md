@@ -56,6 +56,13 @@ composer require soyhuce/laravel-eloquent-extended
 - Builder::withImplode($relations, string $column, string $glue, ?string $orderBy = null, string $direction = 'asc') :
   Builder
 
+### Creation
+
+- Builder::insertModels(array $values): bool
+- Builder::upsertModels(array $values, string|array $uniqueBy, ?array $update = null): int
+- Builder::insertModelsReturning(array $values, array $returning = ['*']): Collection (requires tpetry/laravel-postgresql-enhanced)
+- Builder::upsertModelsReturning(array $values, string|array $uniqueBy, ?array $update = null, array $returning = ['*']): Collection (requires tpetry/laravel-postgresql-enhanced)
+
 ## Eloquent Collection
 
 - Collection::loadAttributes(Closure(Builder): Builder|void $loadWith): Collection
