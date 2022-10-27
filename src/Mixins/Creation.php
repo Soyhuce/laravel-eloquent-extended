@@ -58,7 +58,7 @@ class Creation
 
     public function insertModelsReturning(): Closure
     {
-        return function (array $values, array $returning = ['*']): bool {
+        return function (array $values, array $returning = ['*']): Collection {
             if (!InstalledVersions::isInstalled('tpetry/laravel-postgresql-enhanced')) {
                 throw new LogicException('You must install tpetry/laravel-postgresql-enhanced to use upsertModelsReturning');
             }
