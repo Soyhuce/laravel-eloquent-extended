@@ -18,7 +18,7 @@ class CreationTest extends TestCase
     {
         $user = User::factory()->createOne();
 
-        $this->freezeTime();
+        $this->freezeSecond();
 
         $result = Post::query()->insertModels([
             ['user_id' => $user->id, 'title' => 'Post 1', 'published' => true, 'tags' => ['foo', 'bar']],
@@ -55,7 +55,7 @@ class CreationTest extends TestCase
         $user = User::factory()->createOne();
         $post = Post::factory()->for($user)->createOne(['title' => 'Post 1']);
 
-        $this->freezeTime();
+        $this->freezeSecond();
 
         $result = Post::query()->upsertModels([
             ['user_id' => $user->id, 'title' => 'Post 1', 'published' => true, 'tags' => ['foo', 'bar']],
