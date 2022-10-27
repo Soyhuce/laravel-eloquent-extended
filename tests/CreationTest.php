@@ -32,8 +32,8 @@ class CreationTest extends TestCase
             'title' => 'Post 1',
             'published' => true,
             'tags' => $this->castAsJson(['foo', 'bar']),
-            'created_at' => now(),
-            'updated_at' => now(),
+            'created_at' => now()->toDateTimeString(),
+            'updated_at' => now()->toDateTimeString(),
         ]);
 
         $this->assertDatabaseHas(Post::class, [
@@ -41,8 +41,8 @@ class CreationTest extends TestCase
             'title' => 'Post 2',
             'published' => false,
             'tags' => null,
-            'created_at' => now(),
-            'updated_at' => now(),
+            'created_at' => now()->toDateTimeString(),
+            'updated_at' => now()->toDateTimeString(),
         ]);
     }
 
@@ -70,8 +70,8 @@ class CreationTest extends TestCase
             'title' => 'Post 1',
             'published' => true,
             'tags' => $this->castAsJson(['foo', 'bar']),
-            'created_at' => now(),
-            'updated_at' => now(),
+            'created_at' => now()->toDateTimeString(),
+            'updated_at' => now()->toDateTimeString(),
         ]);
 
         $this->assertDatabaseHas(Post::class, [
@@ -79,8 +79,8 @@ class CreationTest extends TestCase
             'title' => 'Post 2',
             'published' => false,
             'tags' => $this->castAsJson(['baz', 'qux']),
-            'created_at' => now(),
-            'updated_at' => now(),
+            'created_at' => now()->toDateTimeString(),
+            'updated_at' => now()->toDateTimeString(),
         ]);
     }
 }
