@@ -56,6 +56,24 @@ class Creation
         };
     }
 
+    public function insertModelsReturning(): Closure
+    {
+        return function (array $values, array $returning = ['*']): bool {
+            if (!InstalledVersions::isInstalled('tpetry/laravel-postgresql-enhanced')) {
+                throw new LogicException('You must install tpetry/laravel-postgresql-enhanced to use upsertModelsReturning');
+            }
+
+            $values = array_map(
+                fn (array $value): array => $this->newModelInstance($value)->getAttributes(),
+                $values
+            );
+
+            return $this->insertReturning(
+                $this->addTimestampsToUpsertValues($values)
+            );
+        };
+    }
+
     public function upsertModelsReturning(): Closure
     {
         return function (array $values, array|string $uniqueBy, ?array $update = null, array $returning = ['*']): Collection {
