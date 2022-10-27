@@ -3,6 +3,7 @@
 namespace Soyhuce\EloquentExtended\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithDeprecationHandling;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Soyhuce\EloquentExtended\EloquentExtendedServiceProvider;
@@ -21,6 +22,7 @@ class TestCase extends Orchestra
 
         $this->loadMigrationsFrom(__DIR__ . '/migrations');
         Factory::guessFactoryNamesUsing(fn (string $modelName) => $modelName . 'Factory');
+        Model::unguard();
     }
 
     protected function getPackageProviders($app)

@@ -14,6 +14,8 @@ class Extension implements ModelResolver
         $builderClass = $model->queryBuilder->fqcn;
 
         Collection::make([
+            'bool insertModels(array $values)',
+            'int upsertModels(array $values, string|array $uniqueBy, ?array $update = null)',
             "{$builderClass} scope(\\Illuminate\\Database\\Eloquent\\Scope \$scope)",
             "{$builderClass} scoped(\\Closure \$callable)",
             "{$builderClass} preventInvalidDirection(string \$direction)",
