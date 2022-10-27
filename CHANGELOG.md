@@ -2,6 +2,15 @@
 
 All notable changes to `laravel-eloquent-extended` will be documented in this file.
 
+## 1.2.0 - 2022-10-27
+
+### What's Changed
+
+- Add insertModels and upsertModels by @bastien-phi in https://github.com/Soyhuce/laravel-eloquent-extended/pull/6
+- Add insertModelsReturning macro by @bastien-phi in https://github.com/Soyhuce/laravel-eloquent-extended/pull/7
+
+**Full Changelog**: https://github.com/Soyhuce/laravel-eloquent-extended/compare/1.1.0...1.2.0
+
 ## 1.1.0 - 2022-10-21
 
 ### What's Changed
