@@ -31,7 +31,7 @@
         "phpstan/phpstan-deprecation-rules": "^1.0",
         "phpstan/phpstan-phpunit": "^1.0",
         "phpunit/phpunit": "^9.5",
-        "soyhuce/next-ide-helper": "^0.11.0",
+        "soyhuce/next-ide-helper": "^0.12.0",
         "tpetry/laravel-postgresql-enhanced": "^0.26.0"
     },
     "suggest": {
