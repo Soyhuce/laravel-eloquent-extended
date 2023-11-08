@@ -19,7 +19,7 @@ class Result
                 return null;
             }
 
-            return $this->offset(mt_rand(0, $total - 1))->first();
+            return $this->offset(random_int(0, $total - 1))->first();
         };
     }
 }
