@@ -13,15 +13,16 @@ class CollectionMixin
     public function loadAttributes(): Closure
     {
         return function (Closure $closure): self {
-            if ($this->isEmpty()) {
+            $model = $this->first();
+            if ($model === null) {
                 return $this;
             }
 
-            $query = $this->first()->newModelQuery()
+            $query = $model->newModelQuery()
                 ->whereKey($this->modelKeys())
-                ->select($this->first()->getKeyName());
+                ->select($model->getKeyName());
             $query = $closure($query) ?? $query;
-            $models = $query->get()->keyBy($this->first()->getKeyName());
+            $models = $query->get()->keyBy($model->getKeyName());
 
             $attributes = Arr::except(
                 array_keys($models->first()->getAttributes()),

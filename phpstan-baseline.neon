@@ -1,16 +1,6 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Cannot call method getKeyName\\(\\) on Illuminate\\\\Database\\\\Eloquent\\\\Model\\|null\\.$#"
-			count: 2
-			path: src/Mixins/CollectionMixin.php
-
-		-
-			message: "#^Cannot call method newModelQuery\\(\\) on Illuminate\\\\Database\\\\Eloquent\\\\Model\\|null\\.$#"
-			count: 1
-			path: src/Mixins/CollectionMixin.php
-
-		-
 			message: "#^PHPDoc tag @mixin contains generic class Illuminate\\\\Database\\\\Eloquent\\\\Collection but does not specify its types\\: TKey, TModel$#"
 			count: 1
 			path: src/Mixins/CollectionMixin.php
