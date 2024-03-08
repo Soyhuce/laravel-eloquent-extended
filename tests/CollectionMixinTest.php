@@ -17,7 +17,7 @@ class CollectionMixinTest extends TestCase
      */
     public function collectionCanLoadMoreAttributes(): void
     {
-        /** @var \Soyhuce\EloquentExtended\Tests\Fixtures\User $author */
+        /** @var User $author */
         $author = User::factory()->hasPosts()->createOne();
         $reader = User::factory()->createOne();
 

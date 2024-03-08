@@ -16,7 +16,7 @@ class LoadsAttributesTest extends TestCase
      */
     public function modelCanLoadMoreAttributes(): void
     {
-        /** @var \Soyhuce\EloquentExtended\Tests\Fixtures\User $author */
+        /** @var User $author */
         $author = User::factory()->hasPosts()->createOne();
 
         $author->loadAttributes(
