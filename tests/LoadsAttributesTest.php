@@ -12,7 +12,6 @@ class LoadsAttributesTest extends TestCase
 {
     /**
      * @test
-     * @covers ::loadWith
      */
     public function modelCanLoadMoreAttributes(): void
     {

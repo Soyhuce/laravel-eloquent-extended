@@ -13,7 +13,6 @@ class CollectionMixinTest extends TestCase
 {
     /**
      * @test
-     * @covers ::loadWith
      */
     public function collectionCanLoadMoreAttributes(): void
     {

@@ -12,7 +12,6 @@ class CreationTest extends TestCase
 {
     /**
      * @test
-     * @covers ::insertModels
      */
     public function modelsAreInserted(): void
     {
@@ -48,7 +47,6 @@ class CreationTest extends TestCase
 
     /**
      * @test
-     * @covers ::insertModels
      */
     public function modelsAreUpserted(): void
     {
