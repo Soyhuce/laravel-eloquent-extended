@@ -76,7 +76,17 @@ parameters:
 			path: src/Mixins/Ordering.php
 
 		-
+			message: "#^Offset 0 does not exist on array\\|null\\.$#"
+			count: 1
+			path: src/Mixins/Ordering.php
+
+		-
 			message: "#^PHPDoc tag @mixin contains generic class Illuminate\\\\Database\\\\Eloquent\\\\Builder but does not specify its types\\: TModelClass$#"
+			count: 1
+			path: src/Mixins/Ordering.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of function count expects array\\|Countable, array\\|null given\\.$#"
 			count: 1
 			path: src/Mixins/Ordering.php
 
@@ -121,12 +131,22 @@ parameters:
 			path: src/Mixins/Select.php
 
 		-
+			message: "#^Offset 0 does not exist on array\\|null\\.$#"
+			count: 1
+			path: src/Mixins/Select.php
+
+		-
 			message: "#^Parameter \\#1 \\$query of method Soyhuce\\\\EloquentExtended\\\\Aggregates\\\\Contracts\\\\AggregateFunction\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:apply\\(\\) expects Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>, \\$this\\(Soyhuce\\\\EloquentExtended\\\\Mixins\\\\Select\\<TModelClass of Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\) given\\.$#"
 			count: 1
 			path: src/Mixins/Select.php
 
 		-
 			message: "#^Parameter \\#1 \\$query of method Soyhuce\\\\EloquentExtended\\\\Aggregates\\\\Contracts\\\\MultiRelationAggregate\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:enclose\\(\\) expects Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>, \\$this\\(Soyhuce\\\\EloquentExtended\\\\Mixins\\\\Select\\<TModelClass of Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\) given\\.$#"
+			count: 1
+			path: src/Mixins/Select.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of function count expects array\\|Countable, array\\|null given\\.$#"
 			count: 1
 			path: src/Mixins/Select.php
 
