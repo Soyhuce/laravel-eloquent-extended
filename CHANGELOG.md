@@ -2,6 +2,16 @@
 
 All notable changes to `laravel-eloquent-extended` will be documented in this file.
 
+## 1.5.0 - 2024-04-19
+
+### What's Changed
+
+* Bump ramsey/composer-install from 2 to 3 by @dependabot in https://github.com/Soyhuce/laravel-eloquent-extended/pull/18
+* Bump dependabot/fetch-metadata from 1.6.0 to 2.0.0 by @dependabot in https://github.com/Soyhuce/laravel-eloquent-extended/pull/20
+* Support Laravel 11 by @bastien-phi in https://github.com/Soyhuce/laravel-eloquent-extended/pull/19
+
+**Full Changelog**: https://github.com/Soyhuce/laravel-eloquent-extended/compare/1.4.0...1.5.0
+
 ## 1.4.0 - 2023-11-24
 
 ### What's Changed
