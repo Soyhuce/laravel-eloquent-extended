@@ -111,6 +111,11 @@ parameters:
 			path: src/Mixins/Select.php
 
 		-
+			message: "#^Binary operation \"\\.\" between Illuminate\\\\Database\\\\Query\\\\Expression\\|string and '\\.\\*' results in an error\\.$#"
+			count: 1
+			path: src/Mixins/Select.php
+
+		-
 			message: "#^Call to protected method callScope\\(\\) of class Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\.$#"
 			count: 1
 			path: src/Mixins/Select.php
