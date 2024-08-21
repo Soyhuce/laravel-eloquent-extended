@@ -6,16 +6,6 @@ parameters:
 			path: src/Mixins/CollectionMixin.php
 
 		-
-			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<TModel of Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:getAttributes\\(\\)\\.$#"
-			count: 4
-			path: src/Mixins/Creation.php
-
-		-
-			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<TModel of Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:newCollection\\(\\)\\.$#"
-			count: 1
-			path: src/Mixins/Creation.php
-
-		-
 			message: "#^Call to protected method addTimestampsToUpsertValues\\(\\) of class Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<TModel of Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\.$#"
 			count: 2
 			path: src/Mixins/Creation.php
@@ -31,7 +21,7 @@ parameters:
 			path: src/Mixins/Misc.php
 
 		-
-			message: "#^Call to protected method callScope\\(\\) of class Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\.$#"
+			message: "#^Call to protected method callScope\\(\\) of class Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<mixed\\>\\.$#"
 			count: 1
 			path: src/Mixins/Ordering.php
 
@@ -72,12 +62,7 @@ parameters:
 
 		-
 			message: "#^Method Soyhuce\\\\EloquentExtended\\\\Mixins\\\\Ordering\\:\\:preventInvalidDirection\\(\\) invoked with 1 parameter, 0 required\\.$#"
-			count: 2
-			path: src/Mixins/Ordering.php
-
-		-
-			message: "#^Offset 0 does not exist on array\\|null\\.$#"
-			count: 1
+			count: 3
 			path: src/Mixins/Ordering.php
 
 		-
@@ -91,7 +76,7 @@ parameters:
 			path: src/Mixins/Ordering.php
 
 		-
-			message: "#^Parameter \\#2 \\$parentQuery of method Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Relation\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:getRelationExistenceQuery\\(\\) expects Illuminate\\\\Database\\\\Eloquent\\\\Builder, \\$this\\(Soyhuce\\\\EloquentExtended\\\\Mixins\\\\Ordering\\) given\\.$#"
+			message: "#^Parameter \\#2 \\$parentQuery of method Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Relation\\<\\*\\>\\:\\:getRelationExistenceQuery\\(\\) expects Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<TDeclaringModel of Illuminate\\\\Database\\\\Eloquent\\\\Model\\>, \\$this\\(Soyhuce\\\\EloquentExtended\\\\Mixins\\\\Ordering\\) given\\.$#"
 			count: 1
 			path: src/Mixins/Ordering.php
 
@@ -116,7 +101,7 @@ parameters:
 			path: src/Mixins/Select.php
 
 		-
-			message: "#^Call to protected method callScope\\(\\) of class Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\.$#"
+			message: "#^Call to protected method callScope\\(\\) of class Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<mixed\\>\\.$#"
 			count: 1
 			path: src/Mixins/Select.php
 
@@ -133,11 +118,6 @@ parameters:
 		-
 			message: "#^Method Soyhuce\\\\EloquentExtended\\\\Mixins\\\\Select\\<TModelClass of Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:withAggregateFunction\\(\\) invoked with 2 parameters, 0 required\\.$#"
 			count: 2
-			path: src/Mixins/Select.php
-
-		-
-			message: "#^Offset 0 does not exist on array\\|null\\.$#"
-			count: 1
 			path: src/Mixins/Select.php
 
 		-
@@ -161,7 +141,7 @@ parameters:
 			path: src/Mixins/Select.php
 
 		-
-			message: "#^Parameter \\#2 \\$parentQuery of method Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Relation\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:getRelationExistenceQuery\\(\\) expects Illuminate\\\\Database\\\\Eloquent\\\\Builder, \\$this\\(Soyhuce\\\\EloquentExtended\\\\Mixins\\\\Select\\<TModelClass of Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\) given\\.$#"
+			message: "#^Parameter \\#2 \\$parentQuery of method Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Relation\\<\\*\\>\\:\\:getRelationExistenceQuery\\(\\) expects Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<TDeclaringModel of Illuminate\\\\Database\\\\Eloquent\\\\Model\\>, \\$this\\(Soyhuce\\\\EloquentExtended\\\\Mixins\\\\Select\\<TModelClass of Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\) given\\.$#"
 			count: 1
 			path: src/Mixins/Select.php
 

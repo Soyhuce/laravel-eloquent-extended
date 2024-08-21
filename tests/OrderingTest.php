@@ -40,7 +40,7 @@ class OrderingTest extends TestCase
      * @test
      * @covers ::orderByNullsLast
      */
-    public function orderByNullLast(): void
+    public function orderByNullsLast(): void
     {
         $sqliteVersion = User::query()->getConnection()->getPdo()->getAttribute(PDO::ATTR_SERVER_VERSION);
 
@@ -87,6 +87,60 @@ class OrderingTest extends TestCase
         $this->assertEquals(
             [$user->id, $admin->id, $none->id],
             User::query()->orderByRawNullsLast('UPPER("role") desc')->pluck('id')->all()
+        );
+    }
+
+    /**
+     * @test
+     * @covers ::orderByNullsLast
+     */
+    public function orderByNullsFirst(): void
+    {
+        $sqliteVersion = User::query()->getConnection()->getPdo()->getAttribute(PDO::ATTR_SERVER_VERSION);
+
+        if (version_compare($sqliteVersion, '3.31', '<')) {
+            $this->markTestSkipped('Sqlite < 3.31 does not support nulls last');
+        }
+
+        $admin = User::factory()->createOne(['role' => 'admin']);
+        $user = User::factory()->createOne(['role' => 'user']);
+        $none = User::factory()->createOne(['role' => null]);
+
+        $this->assertEquals(
+            [$none->id, $admin->id, $user->id],
+            User::query()->orderByNullsFirst('role')->pluck('id')->all()
+        );
+
+        $this->assertEquals(
+            [$none->id, $user->id, $admin->id],
+            User::query()->orderByNullsFirst('role', 'desc')->pluck('id')->all()
+        );
+    }
+
+    /**
+     * @test
+     * @covers ::orderByRawNullsLast
+     */
+    public function orderByRawNullsFirst(): void
+    {
+        $sqliteVersion = User::query()->getConnection()->getPdo()->getAttribute(PDO::ATTR_SERVER_VERSION);
+
+        if (version_compare($sqliteVersion, '3.31', '<')) {
+            $this->markTestSkipped('Sqlite < 3.31 does not support nulls last');
+        }
+
+        $admin = User::factory()->createOne(['role' => 'admin']);
+        $user = User::factory()->createOne(['role' => 'user']);
+        $none = User::factory()->createOne(['role' => null]);
+
+        $this->assertEquals(
+            [$none->id, $admin->id, $user->id],
+            User::query()->orderByRawNullsFirst('UPPER("role")')->pluck('id')->all()
+        );
+
+        $this->assertEquals(
+            [$none->id, $user->id, $admin->id],
+            User::query()->orderByRawNullsFirst('UPPER("role") desc')->pluck('id')->all()
         );
     }
 
