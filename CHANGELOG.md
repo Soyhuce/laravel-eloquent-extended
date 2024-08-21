@@ -2,6 +2,16 @@
 
 All notable changes to `laravel-eloquent-extended` will be documented in this file.
 
+## 1.6.0 - 2024-08-21
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.0.0 to 2.1.0 by @dependabot in https://github.com/Soyhuce/laravel-eloquent-extended/pull/21
+* Bump dependabot/fetch-metadata from 2.1.0 to 2.2.0 by @dependabot in https://github.com/Soyhuce/laravel-eloquent-extended/pull/22
+* Add orderByNullsFirst method by @bastien-phi in https://github.com/Soyhuce/laravel-eloquent-extended/pull/23
+
+**Full Changelog**: https://github.com/Soyhuce/laravel-eloquent-extended/compare/1.5.0...1.6.0
+
 ## 1.5.0 - 2024-04-19
 
 ### What's Changed
