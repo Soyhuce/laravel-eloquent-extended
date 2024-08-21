@@ -30,6 +30,8 @@ class Extension implements ModelResolver
             "{$builderClass} withImplode(array|string \$relations, string \$column, string \$glue, ?string \$orderBy = null, string \$direction = 'asc')",
             "{$builderClass} orderByNullsLast(string \$column, string \$direction = 'asc')",
             "{$builderClass} orderByRawNullsLast(string \$sql)",
+            "{$builderClass} orderByNullsFirst(string \$column, string \$direction = 'asc')",
+            "{$builderClass} orderByRawNullsFirst(string \$sql)",
             "{$builderClass} orderByAggregate(string \$relationName, string \$column, string \$direction = 'asc', ?string \$function = null, ?\\Closure \$constraints = null)",
             "{$builderClass} orderByExists(string \$relation, ?\\Closure \$constraints = null, string \$direction = 'asc')",
             "{$builderClass} orderByExistsDesc(string \$relation, ?\\Closure \$constraints = null)",

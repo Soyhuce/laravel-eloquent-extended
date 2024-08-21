@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Query\Builder as QueryBuilder;
 use Illuminate\Support\Collection;
 use Soyhuce\EloquentExtended\Aggregates\Contracts\MultiRelationAggregate;
+use function sprintf;
 
 /**
  * @template TModelClass of \Illuminate\Database\Eloquent\Model

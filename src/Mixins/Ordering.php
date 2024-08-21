@@ -7,6 +7,7 @@ use Illuminate\Database\Query\Expression;
 use InvalidArgumentException;
 use function count;
 use function in_array;
+use function sprintf;
 
 /**
  * @mixin \Illuminate\Database\Eloquent\Builder
@@ -39,6 +40,28 @@ class Ordering
     {
         return function (string $sql): self {
             $this->orderByRaw("{$sql} nulls last");
+
+            return $this;
+        };
+    }
+
+    public function orderByNullsFirst(): Closure
+    {
+        return function (string $column, string $direction = 'asc'): self {
+            $this->preventInvalidDirection($direction);
+
+            $column = $this->getGrammar()->wrap($column);
+
+            $this->orderByRaw("{$column} {$direction} nulls first");
+
+            return $this;
+        };
+    }
+
+    public function orderByRawNullsFirst(): Closure
+    {
+        return function (string $sql): self {
+            $this->orderByRaw("{$sql} nulls first");
 
             return $this;
         };
