@@ -1,9 +1,9 @@
 # Some useful extensions for Eloquent
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/soyhuce/laravel-eloquent-extended.svg?style=flat-square)](https://packagist.org/packages/soyhuce/laravel-eloquent-extended)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/soyhuce/laravel-eloquent-extended/run-tests?label=tests)](https://github.com/soyhuce/laravel-eloquent-extended/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/soyhuce/laravel-eloquent-extended/Check%20&%20fix%20styling?label=code%20style)](https://github.com/soyhuce/laravel-eloquent-extended/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
-[![GitHub PHPStan Action Status](https://img.shields.io/github/workflow/status/soyhuce/laravel-eloquent-extended/PHPStan?label=phpstan)](https://github.com/soyhuce/laravel-eloquent-extended/actions?query=workflow%3APHPStan+branch%3Amain)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/soyhuce/laravel-eloquent-extended/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/soyhuce/laravel-eloquent-extended/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/soyhuce/laravel-eloquent-extended/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/soyhuce/laravel-eloquent-extended/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![GitHub PHPStan Action Status](https://img.shields.io/github/actions/workflow/status/soyhuce/laravel-eloquent-extended/phpstan.yml?branch=main&label=phpstan)](https://github.com/soyhuce/laravel-eloquent-extended/actions?query=workflow%3APHPStan+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/soyhuce/laravel-eloquent-extended.svg?style=flat-square)](https://packagist.org/packages/soyhuce/laravel-eloquent-extended)
 
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
