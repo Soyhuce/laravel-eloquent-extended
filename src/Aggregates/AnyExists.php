@@ -14,7 +14,7 @@ use function sprintf;
  */
 class AnyExists implements MultiRelationAggregate
 {
-    /** @var \Illuminate\Support\Collection<int, \Illuminate\Database\Query\Builder> */
+    /** @var Collection<int, QueryBuilder> */
     protected Collection $existenceQueries;
 
     public function __construct(
@@ -43,7 +43,7 @@ class AnyExists implements MultiRelationAggregate
 
     /**
      * @phpcsSuppress SlevomatCodingStandard.Functions.UnusedParameter
-     * @param \Illuminate\Database\Eloquent\Builder<TModelClass> $query
+     * @param Builder<TModelClass> $query
      */
     public function apply(Builder $query, QueryBuilder $aggregateQuery, string $alias): void
     {
@@ -51,7 +51,7 @@ class AnyExists implements MultiRelationAggregate
     }
 
     /**
-     * @param \Illuminate\Database\Eloquent\Builder<TModelClass> $query
+     * @param Builder<TModelClass> $query
      */
     public function enclose(Builder $query): void
     {

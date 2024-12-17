@@ -10,7 +10,8 @@ use function in_array;
 use function sprintf;
 
 /**
- * @mixin \Illuminate\Database\Eloquent\Builder
+ * @template TModel of \Illuminate\Database\Eloquent\Model
+ * @mixin \Illuminate\Database\Eloquent\Builder<TModel>
  */
 class Ordering
 {

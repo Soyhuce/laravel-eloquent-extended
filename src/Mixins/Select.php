@@ -14,8 +14,8 @@ use function count;
 use function is_array;
 
 /**
- * @template TModelClass of \Illuminate\Database\Eloquent\Model
- * @mixin \Illuminate\Database\Eloquent\Builder<TModelClass>
+ * @template TModel of \Illuminate\Database\Eloquent\Model
+ * @mixin \Illuminate\Database\Eloquent\Builder<TModel>
  */
 class Select
 {
@@ -23,7 +23,7 @@ class Select
     {
         /**
          * @param array<string, Closure>|array<string>|string $relations
-         * @param \Soyhuce\EloquentExtended\Aggregates\Contracts\AggregateFunction<TModelClass>
+         * @param AggregateFunction<TModel>
          */
         return function ($relations, AggregateFunction $aggregateFunction): self {
             if (empty($relations)) {

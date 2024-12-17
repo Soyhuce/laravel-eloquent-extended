@@ -51,7 +51,7 @@ class Implode implements AggregateFunction, QualifiesRelatedColumn
     }
 
     /**
-     * @param \Illuminate\Database\Eloquent\Builder<TModelClass> $query
+     * @param Builder<TModelClass> $query
      */
     public function apply(Builder $query, QueryBuilder $aggregateQuery, string $alias): void
     {
