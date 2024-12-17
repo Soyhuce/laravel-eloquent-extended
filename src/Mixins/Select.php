@@ -23,7 +23,7 @@ class Select
     {
         /**
          * @param array<string, Closure>|array<string>|string $relations
-         * @param AggregateFunction<TModel>
+         * @param AggregateFunction<TModel> $aggregateFunction
          */
         return function ($relations, AggregateFunction $aggregateFunction): self {
             if (empty($relations)) {
