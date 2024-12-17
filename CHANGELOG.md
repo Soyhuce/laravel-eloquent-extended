@@ -2,6 +2,14 @@
 
 All notable changes to `laravel-eloquent-extended` will be documented in this file.
 
+## 1.7.0 - 2024-12-17
+
+### What's Changed
+
+* Upgrade dependencies and php 8.4 by @bastien-phi in https://github.com/Soyhuce/laravel-eloquent-extended/pull/24
+
+**Full Changelog**: https://github.com/Soyhuce/laravel-eloquent-extended/compare/1.6.0...1.7.0
+
 ## 1.6.0 - 2024-08-21
 
 ### What's Changed
