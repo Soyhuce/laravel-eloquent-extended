@@ -6,7 +6,9 @@ use Closure;
 use Illuminate\Support\Arr;
 
 /**
- * @mixin \Illuminate\Database\Eloquent\Collection
+ * @template TKey of array-key
+ * @template TModel of \Illuminate\Database\Eloquent\Model
+ * @mixin \Illuminate\Database\Eloquent\Collection<TKey, TModel>
  */
 class CollectionMixin
 {

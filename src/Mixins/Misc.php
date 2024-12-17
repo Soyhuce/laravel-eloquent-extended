@@ -6,7 +6,8 @@ use Closure;
 use Illuminate\Database\Eloquent\Scope;
 
 /**
- * @mixin \Illuminate\Database\Eloquent\Builder
+ * @template TModel of \Illuminate\Database\Eloquent\Model
+ * @mixin \Illuminate\Database\Eloquent\Builder<TModel>
  */
 class Misc
 {

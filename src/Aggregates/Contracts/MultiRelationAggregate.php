@@ -14,7 +14,7 @@ interface MultiRelationAggregate extends AggregateFunction
      * Enclose the aggregate on the query.
      * This method is executed once for all relations.
      *
-     * @param \Illuminate\Database\Eloquent\Builder<TModelClass> $query
+     * @param Builder<TModelClass> $query
      */
     public function enclose(Builder $query): void;
 }

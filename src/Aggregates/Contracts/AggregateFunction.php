@@ -29,7 +29,7 @@ interface AggregateFunction
      * Apply the aggregateQuery in the query.
      * The method is executed on each relation.
      *
-     * @param \Illuminate\Database\Eloquent\Builder<TModelClass> $query
+     * @param Builder<TModelClass> $query
      */
     public function apply(Builder $query, QueryBuilder $aggregateQuery, string $alias): void;
 }
