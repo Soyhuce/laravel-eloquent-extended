@@ -127,12 +127,6 @@ parameters:
 			path: src/Mixins/Select.php
 
 		-
-			message: '#^PHPDoc tag @param has invalid value \(\\Soyhuce\\EloquentExtended\\Aggregates\\Contracts\\AggregateFunction\<TModel\>\)\: Unexpected token "\\n         ", expected variable at offset 167 on line 3$#'
-			identifier: phpDoc.parseError
-			count: 1
-			path: src/Mixins/Select.php
-
-		-
 			message: '#^Parameter \#1 \$query of method Soyhuce\\EloquentExtended\\Aggregates\\Contracts\\AggregateFunction\<Illuminate\\Database\\Eloquent\\Model\>\:\:apply\(\) expects Illuminate\\Database\\Eloquent\\Builder\<Illuminate\\Database\\Eloquent\\Model\>, \$this\(Soyhuce\\EloquentExtended\\Mixins\\Select\<TModel of Illuminate\\Database\\Eloquent\\Model\>\) given\.$#'
 			identifier: argument.type
 			count: 1
