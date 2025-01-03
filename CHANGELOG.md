@@ -2,6 +2,14 @@
 
 All notable changes to `laravel-eloquent-extended` will be documented in this file.
 
+## 1.7.1 - 2025-01-03
+
+### What's Changed
+
+* Use $this return type for builders @methods by @bastien-phi in https://github.com/Soyhuce/laravel-eloquent-extended/pull/25
+
+**Full Changelog**: https://github.com/Soyhuce/laravel-eloquent-extended/compare/1.7.0...1.7.1
+
 ## 1.7.0 - 2024-12-17
 
 ### What's Changed
