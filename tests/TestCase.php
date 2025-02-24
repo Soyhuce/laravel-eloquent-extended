@@ -48,6 +48,9 @@ class TestCase extends Orchestra
                     if (str_starts_with($file, realpath(__DIR__ . '/../vendor/fakerphp/faker'))) {
                         return;
                     }
+                    if (str_starts_with($file, realpath(__DIR__ . '/../vendor/symfony'))) {
+                        return;
+                    }
 
                     throw new ErrorException($message, 0, $level, $file, $line);
                 }
