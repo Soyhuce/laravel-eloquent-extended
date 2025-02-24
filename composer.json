@@ -30,8 +30,8 @@
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan-deprecation-rules": "^2.0",
         "phpstan/phpstan-phpunit": "^2.0",
-        "soyhuce/next-ide-helper": "^0.19.2",
-        "tpetry/laravel-postgresql-enhanced": "^0.37.0"
+        "soyhuce/next-ide-helper": "^1.0",
+        "tpetry/laravel-postgresql-enhanced": "^2.0"
     },
     "suggest": {
         "tpetry/laravel-postgresql-enhanced": "Specific PostgreSQL extensions for Eloquent"
