@@ -2,6 +2,7 @@
 
 namespace Soyhuce\EloquentExtended\Tests;
 
+use ErrorException;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithDeprecationHandling;
@@ -30,5 +31,28 @@ class TestCase extends Orchestra
         return [
             EloquentExtendedServiceProvider::class,
         ];
+    }
+
+    protected function withoutDeprecationHandling(): static
+    {
+        if ($this->originalDeprecationHandler == null) {
+            $this->originalDeprecationHandler = set_error_handler(function (
+                $level,
+                $message,
+                $file = '',
+                $line = 0,
+            ): void {
+                if (in_array($level, [E_DEPRECATED, E_USER_DEPRECATED], true) || (error_reporting() & $level)) {
+                    // Silenced vendor errors
+                    if (str_starts_with($file, realpath(__DIR__ . '/../vendor/fakerphp/faker'))) {
+                        return;
+                    }
+
+                    throw new ErrorException($message, 0, $level, $file, $line);
+                }
+            });
+        }
+
+        return $this;
     }
 }
