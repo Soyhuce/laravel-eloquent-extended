@@ -85,7 +85,7 @@ parameters:
 			path: src/Mixins/Ordering.php
 
 		-
-			message: '#^Parameter \#3 \$columns of method Illuminate\\Database\\Eloquent\\Relations\\Relation\<\*,\*,\*\>\:\:getRelationExistenceQuery\(\) expects array\<model property of never\>\|model property of never, Illuminate\\Database\\Query\\Expression given\.$#'
+			message: '#^Parameter \#3 \$columns of method Illuminate\\Database\\Eloquent\\Relations\\Relation\<\*,\*,\*\>\:\:getRelationExistenceQuery\(\) expects array\<model property of never\>\|model property of never, Illuminate\\Database\\Query\\Expression\<string\> given\.$#'
 			identifier: argument.type
 			count: 1
 			path: src/Mixins/Ordering.php
@@ -157,7 +157,7 @@ parameters:
 			path: src/Mixins/Select.php
 
 		-
-			message: '#^Parameter \#3 \$columns of method Illuminate\\Database\\Eloquent\\Relations\\Relation\<\*,\*,\*\>\:\:getRelationExistenceQuery\(\) expects array\<model property of never\>\|model property of never, Illuminate\\Database\\Query\\Expression given\.$#'
+			message: '#^Parameter \#3 \$columns of method Illuminate\\Database\\Eloquent\\Relations\\Relation\<\*,\*,\*\>\:\:getRelationExistenceQuery\(\) expects array\<model property of never\>\|model property of never, Illuminate\\Database\\Query\\Expression\<string\> given\.$#'
 			identifier: argument.type
 			count: 1
 			path: src/Mixins/Select.php
