@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithDeprecationHandling;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Soyhuce\EloquentExtended\EloquentExtendedServiceProvider;
+use function in_array;
 
 /**
  * @coversNothing
