@@ -2,6 +2,15 @@
 
 All notable changes to `laravel-eloquent-extended` will be documented in this file.
 
+## 1.8.0 - 2025-02-24
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.2.0 to 2.3.0 by @dependabot in https://github.com/Soyhuce/laravel-eloquent-extended/pull/26
+* Run tests with Laravel 12 by @bastien-phi in https://github.com/Soyhuce/laravel-eloquent-extended/pull/27
+
+**Full Changelog**: https://github.com/Soyhuce/laravel-eloquent-extended/compare/1.7.1...1.8.0
+
 ## 1.7.1 - 2025-01-03
 
 ### What's Changed
