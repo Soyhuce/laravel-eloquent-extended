@@ -4,16 +4,14 @@ namespace Soyhuce\EloquentExtended\Tests;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\Test;
 use Soyhuce\EloquentExtended\Tests\Fixtures\User;
 
-/**
- * @coversDefaultClass \Soyhuce\EloquentExtended\Mixins\CollectionMixin
- */
+#[CoversClass(\Soyhuce\EloquentExtended\Mixins\CollectionMixin::class)]
 class CollectionMixinTest extends TestCase
 {
-    /**
-     * @test
-     */
+    #[Test]
     public function collectionCanLoadMoreAttributes(): void
     {
         /** @var User $author */

@@ -3,16 +3,14 @@
 namespace Soyhuce\EloquentExtended\Tests;
 
 use Illuminate\Database\Eloquent\Builder;
+use PHPUnit\Framework\Attributes\CoversNothing;
+use PHPUnit\Framework\Attributes\Test;
 use Soyhuce\EloquentExtended\Tests\Fixtures\User;
 
-/**
- * @coversNothing
- */
+#[CoversNothing]
 class LoadsAttributesTest extends TestCase
 {
-    /**
-     * @test
-     */
+    #[Test]
     public function modelCanLoadMoreAttributes(): void
     {
         /** @var User $author */

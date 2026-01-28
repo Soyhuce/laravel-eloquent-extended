@@ -13,7 +13,7 @@ parameters:
 			path: src/Mixins/Creation.php
 
 		-
-			message: '#^Parameter \#1 \$builder of method Illuminate\\Database\\Eloquent\\Scope\:\:apply\(\) expects Illuminate\\Database\\Eloquent\\Builder, \$this\(Soyhuce\\EloquentExtended\\Mixins\\Misc\<TModel of Illuminate\\Database\\Eloquent\\Model\>\) given\.$#'
+			message: '#^Parameter \#1 \$builder of method Illuminate\\Database\\Eloquent\\Scope\:\:apply\(\) expects Illuminate\\Database\\Eloquent\\Builder\<TModel of Illuminate\\Database\\Eloquent\\Model\>, \$this\(Soyhuce\\EloquentExtended\\Mixins\\Misc\<TModel of Illuminate\\Database\\Eloquent\\Model\>\) given\.$#'
 			identifier: argument.type
 			count: 1
 			path: src/Mixins/Misc.php
@@ -73,7 +73,7 @@ parameters:
 			path: src/Mixins/Ordering.php
 
 		-
-			message: '#^Parameter \#1 \$value of function count expects array\|Countable, array\|null given\.$#'
+			message: '#^Parameter \#1 \$value of function count expects array\|Countable, array\<Illuminate\\Contracts\\Database\\Query\\Expression\|string\>\|null given\.$#'
 			identifier: argument.type
 			count: 1
 			path: src/Mixins/Ordering.php
@@ -139,7 +139,7 @@ parameters:
 			path: src/Mixins/Select.php
 
 		-
-			message: '#^Parameter \#1 \$value of function count expects array\|Countable, array\|null given\.$#'
+			message: '#^Parameter \#1 \$value of function count expects array\|Countable, array\<Illuminate\\Contracts\\Database\\Query\\Expression\|string\>\|null given\.$#'
 			identifier: argument.type
 			count: 1
 			path: src/Mixins/Select.php
@@ -161,4 +161,3 @@ parameters:
 			identifier: argument.type
 			count: 1
 			path: src/Mixins/Select.php
-

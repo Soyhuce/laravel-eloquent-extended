@@ -2,17 +2,15 @@
 
 namespace Soyhuce\EloquentExtended\Tests;
 
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\Test;
 use Soyhuce\EloquentExtended\Tests\Fixtures\Post;
 use Soyhuce\EloquentExtended\Tests\Fixtures\User;
 
-/**
- * @coversDefaultClass \Soyhuce\EloquentExtended\Tests\Fixtures\Post
- */
+#[CoversClass(Post::class)]
 class CreationTest extends TestCase
 {
-    /**
-     * @test
-     */
+    #[Test]
     public function modelsAreInserted(): void
     {
         $user = User::factory()->createOne();
@@ -45,9 +43,7 @@ class CreationTest extends TestCase
         ]);
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function modelsAreUpserted(): void
     {
         $user = User::factory()->createOne();
