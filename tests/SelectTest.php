@@ -2,17 +2,14 @@
 
 namespace Soyhuce\EloquentExtended\Tests;
 
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\Test;
 use Soyhuce\EloquentExtended\Tests\Fixtures\User;
 
-/**
- * @coversDefaultClass \Soyhuce\EloquentExtended\Mixins\Select
- */
+#[CoversClass(\Soyhuce\EloquentExtended\Mixins\Select::class)]
 class SelectTest extends TestCase
 {
-    /**
-     * @test
-     * @covers ::withAnyExists
-     */
+    #[Test]
     public function withAnyExistsReturnCorrectValues(): void
     {
         $author = User::factory()->hasPosts()->createOne();
@@ -24,10 +21,7 @@ class SelectTest extends TestCase
         $this->assertFalse($users->find($reader->id)->related_exists);
     }
 
-    /**
-     * @test
-     * @covers ::withImplode
-     */
+    #[Test]
     public function withImplode(): void
     {
         $query = User::query()->withImplode('posts', 'title', ' - ');
@@ -39,10 +33,7 @@ class SelectTest extends TestCase
         $this->assertEquals([' - '], $query->getBindings());
     }
 
-    /**
-     * @test
-     * @covers ::withImplode
-     */
+    #[Test]
     public function withImplodeWithOrder(): void
     {
         $query = User::query()->withImplode('posts', 'title', ' - ', 'id', 'desc');

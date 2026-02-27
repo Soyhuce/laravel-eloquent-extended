@@ -2,17 +2,14 @@
 
 namespace Soyhuce\EloquentExtended\Tests;
 
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\Test;
 use Soyhuce\EloquentExtended\Tests\Fixtures\User;
 
-/**
- * @coversDefaultClass \Soyhuce\EloquentExtended\Mixins\Result
- */
+#[CoversClass(\Soyhuce\EloquentExtended\Mixins\Result::class)]
 class ResultTest extends TestCase
 {
-    /**
-     * @test
-     * @covers ::random
-     */
+    #[Test]
     public function modelCanBeRandomlyChosen(): void
     {
         User::factory(100)->create();
@@ -31,10 +28,7 @@ class ResultTest extends TestCase
         $this->assertTrue(false, 'Failed to get 2 randoms users');
     }
 
-    /**
-     * @test
-     * @covers ::random
-     */
+    #[Test]
     public function resultCanBeNull(): void
     {
         $this->assertNull(User::query()->random());

@@ -4,18 +4,15 @@ namespace Soyhuce\EloquentExtended\Tests;
 
 use InvalidArgumentException;
 use PDO;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\Test;
 use Soyhuce\EloquentExtended\Tests\Fixtures\Post;
 use Soyhuce\EloquentExtended\Tests\Fixtures\User;
 
-/**
- * @coversDefaultClass \Soyhuce\EloquentExtended\Mixins\Ordering
- */
+#[CoversClass(\Soyhuce\EloquentExtended\Mixins\Ordering::class)]
 class OrderingTest extends TestCase
 {
-    /**
-     * @test
-     * @covers ::preventInvalidDirection
-     */
+    #[Test]
     public function ascAndDescAreValid(): void
     {
         User::query()->preventInvalidDirection('asc');
@@ -24,10 +21,7 @@ class OrderingTest extends TestCase
         $this->assertTrue(true);
     }
 
-    /**
-     * @test
-     * @covers ::preventInvalidDirection
-     */
+    #[Test]
     public function otherDirectionIsInvalid(): void
     {
         $this->expectException(InvalidArgumentException::class);
@@ -36,10 +30,7 @@ class OrderingTest extends TestCase
         User::query()->preventInvalidDirection('foo');
     }
 
-    /**
-     * @test
-     * @covers ::orderByNullsLast
-     */
+    #[Test]
     public function orderByNullsLast(): void
     {
         $sqliteVersion = User::query()->getConnection()->getPdo()->getAttribute(PDO::ATTR_SERVER_VERSION);
@@ -63,10 +54,7 @@ class OrderingTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     * @covers ::orderByRawNullsLast
-     */
+    #[Test]
     public function orderByRawNullsLast(): void
     {
         $sqliteVersion = User::query()->getConnection()->getPdo()->getAttribute(PDO::ATTR_SERVER_VERSION);
@@ -90,10 +78,7 @@ class OrderingTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     * @covers ::orderByNullsLast
-     */
+    #[Test]
     public function orderByNullsFirst(): void
     {
         $sqliteVersion = User::query()->getConnection()->getPdo()->getAttribute(PDO::ATTR_SERVER_VERSION);
@@ -117,10 +102,7 @@ class OrderingTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     * @covers ::orderByRawNullsLast
-     */
+    #[Test]
     public function orderByRawNullsFirst(): void
     {
         $sqliteVersion = User::query()->getConnection()->getPdo()->getAttribute(PDO::ATTR_SERVER_VERSION);
@@ -144,10 +126,7 @@ class OrderingTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     * @covers ::orderByExists
-     */
+    #[Test]
     public function orderByExists(): void
     {
         $first = User::factory()->has(Post::factory()->published())->createOne();
@@ -183,10 +162,7 @@ class OrderingTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     * @covers ::orderByExists
-     */
+    #[Test]
     public function orderByCount(): void
     {
         $first = User::factory()->has(Post::factory()->published())->createOne();
@@ -222,10 +198,7 @@ class OrderingTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     * @covers ::orderByExists
-     */
+    #[Test]
     public function orderBySum(): void
     {
         $first = User::factory()->has(Post::factory()->published())->createOne();
@@ -261,10 +234,7 @@ class OrderingTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     * @covers ::orderByExists
-     */
+    #[Test]
     public function orderByMin(): void
     {
         $first = User::factory()->has(Post::factory()->published(false))->createOne();
@@ -300,10 +270,7 @@ class OrderingTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     * @covers ::orderByExists
-     */
+    #[Test]
     public function orderByMax(): void
     {
         $first = User::factory()->has(Post::factory()->published(false))->createOne();

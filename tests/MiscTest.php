@@ -5,17 +5,14 @@ namespace Soyhuce\EloquentExtended\Tests;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Scope;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\Test;
 use Soyhuce\EloquentExtended\Tests\Fixtures\User;
 
-/**
- * @coversDefaultClass \Soyhuce\EloquentExtended\Mixins\Misc
- */
+#[CoversClass(\Soyhuce\EloquentExtended\Mixins\Misc::class)]
 class MiscTest extends TestCase
 {
-    /**
-     * @test
-     * @covers ::scope
-     */
+    #[Test]
     public function scopeIsApplied(): void
     {
         $admin = User::factory()->createOne(['role' => 'admin']);
@@ -34,10 +31,7 @@ class MiscTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     * @covers ::scoped
-     */
+    #[Test]
     public function queryCanBeConfiguredViaClosure(): void
     {
         $admin = User::factory()->createOne(['role' => 'admin']);
